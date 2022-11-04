@@ -17,6 +17,7 @@ public class RegistrationFormWithPageObjectsTests {
     static void configure() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
+        Configuration.holdBrowserOpen = true;
     }
 
     @Test
@@ -28,14 +29,22 @@ public class RegistrationFormWithPageObjectsTests {
                 .setGender("Other")
                 .setNumber("1234567890")
                 .setBirthDate("30", "July", "2008");
+        $("#subjectsInput").setValue("Math").pressEnter();
+        $("#hobbiesWrapper").$(byText("Sports")).click();
+        $("#uploadPicture").uploadFromClasspath("img/1.png");
+        $("#currentAddress").setValue("This is new address for testing");
+        $("#react-select-3-input").setValue("NCR").pressEnter();
+        $("#react-select-4-input").setValue("Noida").pressEnter();
+        registrationFormPage.clickSubmit();
         registrationFormPage.checkResultsTableVisible()
                     .checkResult("Student Name", "Alex Egorov")
                     .checkResult("Student Email", "alex@egorov.com")
                     .checkResult("Date of Birth", "30 July,2008");
+        $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
         System.out.println("Test done fillFormTest");
     }
 
-    @Test
+/*    @Test
     void fillFormWithMinimumDataTest() {
         registrationFormPage.openPage()
                 .setFirstName("Alex")
@@ -46,7 +55,5 @@ public class RegistrationFormWithPageObjectsTests {
         $("#submit").click();
         $(".modal-dialog").should(appear);
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
-        $(".table-responsive table").shouldHave(text("Alex"), text("Egorov"), text("1234567890"));
-    }
-
+        $(".table-responsive table").shouldHave(text("Alex"), text("Egorov"), text("1234567890"));*/
 }
