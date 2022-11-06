@@ -1,27 +1,28 @@
 package com.demoqa.utils;
 
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.TextStyle;
+import java.util.Locale;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class RandomUtils {
-    public static String getRandomString(int length) {
-        String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-        StringBuilder result = new StringBuilder();
-        Random rnd = new Random();
-        while (result.length() < length) {
-            int index = (int) (rnd.nextFloat() * SALTCHARS.length());
-            result.append(SALTCHARS.charAt(index));
-        }
-        return result.toString();
-    }
-    public static String getRandomEmail () {
-        return getRandomString(10) + ("@test.test");
-    }
-    public static Long getRandomLong(Long min, Long max){
-        return ThreadLocalRandom.current().nextLong(min, max);
-    }
-    public static String getRandomPhone(){
-        return "+0000" + getRandomLong(1111111111L, 9999999999L).toString();
-    }
 
+    private static final String randomDate =
+            LocalDate.now().minus(Period.ofDays((new Random().nextInt(365 * 70)))).toString();
+
+    public static String generateDay() {
+        LocalDate localDate = LocalDate.parse(randomDate);
+        return String.valueOf(localDate.getDayOfMonth());
+    }
+    public static String generateMonth() {
+        LocalDate localDate = LocalDate.parse(randomDate);
+        return localDate.getMonth().getDisplayName(TextStyle.FULL, Locale.ENGLISH);
+    }
+    public static String generateYear() {
+        LocalDate localDate = LocalDate.parse(randomDate);
+        return String.valueOf(localDate.getYear());
+    }
 }
+
+
