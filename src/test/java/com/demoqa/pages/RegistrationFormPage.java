@@ -18,7 +18,13 @@ public class RegistrationFormPage {
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
             emailInput = $("#userEmail"),
-            clickSubmit = $("#submit");
+            clickSubmit = $("#submit"),
+            subjectInput = $("#subjectsInput"),
+            hobbiesWrapper = $("#hobbiesWrapper").$(byText("Sports")),
+            uploadPicture = $("#uploadPicture"),
+            currentAddress = $("#currentAddress"),
+            State = $("#react-select-3-input"),
+            City =   $("#react-select-4-input");
 
 
     public RegistrationFormPage openPage() {
@@ -44,49 +50,65 @@ public class RegistrationFormPage {
 
     public RegistrationFormPage setLastName(String value) {
         lastNameInput.setValue(value);
-
         return this;
     }
 
     public RegistrationFormPage setEmail(String value) {
         emailInput.setValue(value);
-
         return this;
     }
 
     public RegistrationFormPage setGender(String value) {
         $("#genterWrapper").$(byText(value)).click();
-
         return this;
     }
 
     public RegistrationFormPage setNumber(String value) {
         $("#userNumber").setValue(value);
-
         return this;
     }
 
     public RegistrationFormPage setBirthDate(String day, String month, String year) {
         $("#dateOfBirthInput").click();
         calendarComponent.setDate(day, month, year);
-
         return this;
     }
 
     public RegistrationFormPage checkResultsTableVisible() {
         resultsModal.checkVisible();
-
         return this;
     }
 
     public RegistrationFormPage checkResult(String key, String value) {
         resultsModal.checkResult(key, value);
-
         return this;
     }
     public RegistrationFormPage clickSubmit() {
         clickSubmit.click();
-
+        return this;
+    }
+    public RegistrationFormPage setSubjectInput(){
+        subjectInput.setValue("Math").pressEnter();
+        return this;
+    }
+    public RegistrationFormPage setHobbiesWrapper(){
+        hobbiesWrapper.click();
+        return this;
+    }
+    public RegistrationFormPage uploadPicture(){
+        uploadPicture.uploadFromClasspath("img/1.png");
+        return this;
+    }
+    public RegistrationFormPage setCurrentAddress(){
+        currentAddress.setValue("This is new address for testing");
+        return this;
+    }
+    public RegistrationFormPage setState() {
+        State.setValue("NCR").pressEnter();
+        return this;
+    }
+    public RegistrationFormPage setCity(){
+        City.setValue("Noida").pressEnter();
         return this;
     }
 }

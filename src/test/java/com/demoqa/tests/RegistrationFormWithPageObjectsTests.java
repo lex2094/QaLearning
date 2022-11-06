@@ -28,13 +28,13 @@ public class RegistrationFormWithPageObjectsTests {
                 .setEmail("alex@egorov.com")
                 .setGender("Other")
                 .setNumber("1234567890")
-                .setBirthDate("30", "July", "2008");
-        $("#subjectsInput").setValue("Math").pressEnter();
-        $("#hobbiesWrapper").$(byText("Sports")).click();
-        $("#uploadPicture").uploadFromClasspath("img/1.png");
-        $("#currentAddress").setValue("This is new address for testing");
-        $("#react-select-3-input").setValue("NCR").pressEnter();
-        $("#react-select-4-input").setValue("Noida").pressEnter();
+                .setBirthDate("30", "July", "2008")
+                .setSubjectInput()
+                .setHobbiesWrapper()
+                .uploadPicture()
+                .setCurrentAddress()
+                .setState()
+                .setCity();
         registrationFormPage.clickSubmit();
         registrationFormPage.checkResultsTableVisible()
                     .checkResult("Student Name", "Alex Egorov")
