@@ -12,7 +12,7 @@ public class WebTest {
 
     //Тестовые данные: ["Selenide", "JUnit"]
     @ValueSource(strings = {"Selenide", "JUnit"})
-    @ParameterizedTest
+    @ParameterizedTest(name = "Проверка числа в поиске яндекса {}")
     // [test_data] == (String testData)
     void yandexSearchTest(String testdata){
         open("https://ya.ru");
