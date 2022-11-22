@@ -9,10 +9,14 @@ public class SimpleJUnitExamplesTest {
 
     @Disabled("Wait something")
     @Test
-    void simpleTest(){
-
+    void simpleTest() {
     }
+
     @DisplayName("Text about something")
-    void simpleTest1(){
+    void simpleTest1() {
+    }
+
+    @Test
+    void simpleTest2() {
     }
 }
