@@ -7,14 +7,6 @@ import org.junit.jupiter.api.Test;
 
 public class RegistrationFormWithPageObjectsMinTests {
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
-
-    @BeforeAll
-    static void configure() {
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1920x1080";
-        //Configuration.holdBrowserOpen = true;
-    }
-
     @Test
     void fillFormWithMinimumDataTest() {
         registrationFormPage.openPage()

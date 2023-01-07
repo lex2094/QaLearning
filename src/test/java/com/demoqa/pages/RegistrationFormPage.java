@@ -32,19 +32,16 @@ public class RegistrationFormPage {
         $(".practice-form-wrapper").shouldHave(text(TITLE_TEXT));
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");
-
         return this;
     }
 
     public RegistrationFormPage setFirstName(String value) {
         firstNameInput.setValue(value);
-
         return this;
     }
 
     public RegistrationFormPage clearFirstName() {
         firstNameInput.clear();
-
         return this;
     }
 

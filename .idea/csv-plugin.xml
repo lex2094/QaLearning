@@ -3,10 +3,73 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="$APPLICATION_CONFIG_DIR$/scratches/Бизнес-Кредит__только для бизнеса.csv">
+        <entry key="$APPLICATION_CONFIG_DIR$/scratches/import_categories1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$APPLICATION_CONFIG_DIR$/scratches/import_categories2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$APPLICATION_CONFIG_DIR$/scratches/import_categories3.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$APPLICATION_CONFIG_DIR$/scratches/Бизнес-Кредит_доп продукты Бизнес и ИП.csv">
           <value>
             <Attribute>
               <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$APPLICATION_CONFIG_DIR$/scratches/Инвестиционный кредит__sber_investment_credit.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$APPLICATION_CONFIG_DIR$/scratches/Лизинг новых и б:у легковых автомобилей__gazprombank_leasing_la_automobile.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$APPLICATION_CONFIG_DIR$/scratches/Лизинг только БИЗНЕС.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$APPLICATION_CONFIG_DIR$/scratches/Лизинг только ИП.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$APPLICATION_CONFIG_DIR$/scratches/Новый легковой транспорт__sberbank_leasing_automobile_new.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/src/test/resources/img/qa_guru.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
